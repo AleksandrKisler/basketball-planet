@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <footer class="footer">
 
-  </div>
+  </footer>
 </template>
+
 <script>
 export default {
-  layout:'default',
+  name: "Footer"
 }
 </script>
+
 

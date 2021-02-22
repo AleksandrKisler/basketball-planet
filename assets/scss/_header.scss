@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 60px;
+  background: $base-color-dirt-black;
+
+  padding: $base-padding*3 $base-padding*3 +1;
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $base-color-light-white;
+    font-size: $base-font-size +2;
+    a {
+      margin-right: $base-margin*10;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $base-color-light-white;
+      cursor: pointer;
+      transition: border-bottom 0.2s ease-in-out;
+      border-bottom:1px solid transparent;
+      padding: 0 $base-padding;
+      &:hover {
+        border-bottom: 1px solid $base-color-light-white;
+      }
+      &.active {
+        border-bottom: 1px solid $base-color-light-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "_variable";
+@import "_header";
+@import "_footer";
+
+html {
+  padding: 0;
+  margin: 0;
+}
+body,
+body * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #BDBDBD;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 0;
+  margin:  0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+section {
+  max-width: 1366px;
+  width: 1366px;
+  box-shadow: 0 0 20px #7C7C7C;
+  background: $base-color-light-white;
+  .main {
+    height: 1920px;
+  }
+}
+
