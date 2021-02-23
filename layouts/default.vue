@@ -4,9 +4,10 @@
     <div class="main">
       <Nuxt />
     </div>
-    </Footer />
+    <Footer />
   </section>
-</template>
+
+</template>s
 <script>
 import Header from "~/components/basic/Header";
 import Footer from "~/components/basic/Footer";

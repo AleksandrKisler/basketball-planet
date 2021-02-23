@@ -8,7 +8,7 @@ html {
 }
 body,
 body * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
   background-color: #BDBDBD;
@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
@@ -28,7 +29,7 @@ section {
   box-shadow: 0 0 20px #7C7C7C;
   background: $base-color-light-white;
   .main {
-    height: 1920px;
+    height: 1049px;
   }
 }
 
