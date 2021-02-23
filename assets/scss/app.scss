@@ -32,4 +32,9 @@ section {
     height: 1049px;
   }
 }
+@media screen and (max-width: 1444px){
+  section {
+    max-width: 1200px;
+  }
+}
 
