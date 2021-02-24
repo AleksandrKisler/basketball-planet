@@ -1,6 +1,7 @@
 @import "_variable";
 @import "_header";
 @import "_footer";
+@import "block-nav";
 
 html {
   padding: 0;
@@ -23,18 +24,17 @@ body {
   font-family: 'Ubuntu', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-section {
+.container {
   max-width: 1366px;
   width: 1366px;
   box-shadow: 0 0 20px #7C7C7C;
   background: $base-color-light-white;
   .main {
-    height: 1049px;
+    height: 100%;
   }
 }
-@media screen and (max-width: 1444px){
-  section {
-    max-width: 1200px;
-  }
+@media screen and (max-width: 1444px) and (min-width: 1280px) {
+  .container { max-width: 1200px; }
+} @media screen and (max-width: 1280px) {
+  .container { max-width: 1000px; }
 }
-

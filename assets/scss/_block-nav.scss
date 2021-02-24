@@ -1,3 +1,112 @@
+.col-left,
+.col-center,
+.col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.block-nav,
+.nav-row,
+.nav-item-title-line, {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.nav-item-1-1,
+.nav-item-2-1,
+.nav-item-1-2,
+.nav-item-2-2 {
+  border: 1px solid $base-color-dirt-black;
+  box-sizing: border-box;
+  border-radius: $base-border-radius*7;
+}
+
+
 .block-nav {
-  
+  width: inherit;
+  height: 100%;
+  margin-top: $base-margin*12 +2;
+  padding: 0 110px 0 110px;
+  position: relative;
+  @media screen and (max-width: 1444px) and (min-width: 1280px) {
+    padding: 0 50px 0 0px;
+  }
+  @media screen and (max-width: 1280px) {
+    padding: 0 20px 0 30px;
+  }
+
+  .dot {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #D46900;
+    top: 160px;
+    left: 532px;
+  }
+  .col-left {
+    align-items: flex-end;
+    .nav-item-1-1 {
+      width: 410px;
+      height: 150px;
+      //background: #000;
+      background-image: url("~/assets/image/block-nav/block-nav-1.png") ;
+      background-position: center center;
+    }
+    .nav-item-1-2 {
+      margin-top: $base-margin*8 +3;
+      height: 315px;
+      width: 220px;
+      background-image: url("~/assets/image/block-nav/block-nav-3.png") ;
+      background-position: center center;
+    }
+  }
+  .col-center {
+    margin-left:$base-margin*8 +3;
+    .nav-row {
+      align-items: center;
+      .nav-item-2-1 {
+        width: 210px;
+        height: 150px;
+        background-image: url("~/assets/image/block-nav/block-nav-2.png");
+        background-position: center center;
+      }
+      .nav-cross {
+        margin-left: $base-margin*12 +2;
+        width: 105px;
+        height: 105px;
+        background-image: url("~/assets/image/block-nav/nav-cross.png");
+        background-position: center center;
+      }
+    }
+    .nav-item-2-2 {
+      margin-top: $base-margin*8 +3;
+      width: 410px;
+      height: 150px;
+      background-image: url("~/assets/image/block-nav/block-nav-4.png");
+      background-position: center center;
+    }
+    .nav-item-h-line {
+      margin: $base-margin*8 0 0 $base-margin*3 +1;
+      height: 187px;
+      width: 4px;
+      border-radius: $base-border-radius*2;
+      background-color: #D46900;
+    }
+    h3 {
+      font-size: $base-font-size+12;
+      align-self: flex-start;
+      padding: 0;
+      margin: $base-margin*7 0 0 $base-margin*3 +1 ;
+    }
+  }
+  .col-right {
+    margin-top: $base-margin*17 +3;
+    width: 290px !important;
+    height: 483px;
+    background-image: url("~/assets/image/block-nav/nzv-pb-logo.png");
+    background-position: center center;
+  }
 }
