@@ -4,7 +4,7 @@
       <a
         v-for="(link,id) in navigation_list"
         :key="`key_${id}`"
-        :to="link.to"
+        :href="link.to"
         :class="['header-link',{'active': link.active}]"
         @click="setActive(link)"
       >
@@ -22,10 +22,11 @@ export default {
     return {
       loading: false,
       navigation_list: [
-        {id:1,title:'Планета Баскетбола',to:'#', active:true},
-        {id:2,title:'О тренировках',to:'#', active:false},
-        {id:3,title:'наша команда',to:'#', active:false},
-        {id:4,title:'запись',to:'#', active:false},
+        {id:1,title:'Планета Баскетбола',to:'#block-nav', active:true},
+        {id:2,title:'О тренировках',to:'#training-list', active:false},
+        {id:3,title:'наша команда',to:'#our-team', active:false},
+        {id:4,title:'запись',to:'#order', active:false},
+        {id:5,title:'о нас',to:'#about-us', active:false},
       ],
     }
   },

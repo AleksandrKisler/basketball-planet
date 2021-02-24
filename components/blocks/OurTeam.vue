@@ -1,5 +1,5 @@
 <template>
-  <section class="our-team">
+  <section class="our-team" id="our-team">
 
   </section>
 </template>
@@ -9,7 +9,3 @@ export default {
   name: "OurTeam"
 }
 </script>
-
-<style scoped>
-
-</style>

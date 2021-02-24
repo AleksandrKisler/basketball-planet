@@ -10,6 +10,7 @@
 html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 body,
 body * {
@@ -33,6 +34,25 @@ body {
   width: 1366px;
   box-shadow: 0 0 20px #7C7C7C;
   background: $base-color-light-white;
+  position: relative;
+  .bg-basketball {
+    width: 200px;
+    height: 200px;
+    background-image: url('~/assets/image/icons/001-basketball.svg');
+    //transform: rotate(45deg);
+    position: absolute;
+    top: 471px;
+    left: 37px;
+  }
+  .bg-whistle {
+    width: 200px;
+    height: 220px;
+    background-image: url('~/assets/image/icons/002-whistle.svg');
+    //transform: rotate(45deg);
+    position: absolute;
+    top: 643px;
+    right: 322px;
+  }
   .main {
     height: 100%;
   }

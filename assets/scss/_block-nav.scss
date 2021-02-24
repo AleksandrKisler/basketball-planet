@@ -30,13 +30,6 @@
   margin-top: $base-margin*12 +2;
   padding: 0 110px 0 110px;
   position: relative;
-  @media screen and (max-width: 1444px) and (min-width: 1280px) {
-    padding: 0 25px 0 40px;
-  }
-  @media screen and (max-width: 1280px) {
-    padding: 0 20px 0 30px;
-  }
-
   .dot {
     position: absolute;
     width: 13px;
@@ -46,6 +39,16 @@
     top: 160px;
     left: 532px;
   }
+  @media screen and (max-width: 1444px) and (min-width: 1280px) {
+    padding: 0 25px 0 40px;
+    .dot {
+      left: 460px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    padding: 0 20px 0 30px;
+  }
+
   .col-left {
     align-items: flex-end;
     .nav-item-1-1 {

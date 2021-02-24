@@ -1,5 +1,7 @@
 <template>
   <section class="container">
+    <div class="bg-basketball"></div>
+    <div class="bg-whistle"></div>
     <Header />
     <div class="main">
       <Nuxt />

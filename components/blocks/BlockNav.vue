@@ -1,5 +1,5 @@
 <template>
-  <section class="block-nav">
+  <section class="block-nav" id="block-nav">
     <div class="col-left">
       <div class="nav-item-1-1">
         <h1>Плантеа Баскетбола</h1>
