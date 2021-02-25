@@ -2,6 +2,9 @@
   <section class="container">
     <div class="bg-basketball"></div>
     <div class="bg-whistle"></div>
+    <div class="bg-basketball-players"></div>
+<!--    <div class="up-to-top" ref="upToTop" v-show="checkHeight">-->
+<!--    </div>-->
     <Header />
     <div class="main">
       <Nuxt />
@@ -20,6 +23,12 @@ export default {
   components: {
     Header,
     Footer
+  },
+  computed: {
+    // checkHeight() {
+    //   console.log(this.$refs.upToTop.clientHeight);
+    //   return false;
+    // }
   }
 
 }

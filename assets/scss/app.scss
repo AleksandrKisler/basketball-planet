@@ -53,6 +53,25 @@ body {
     top: 643px;
     right: 322px;
   }
+  .bg-basketball-players {
+    width: 240px;
+    height: 240px;
+    background-image: url('~/assets/image/icons/003-basketball-players.svg');
+    //transform: rotate(45deg);
+    background-size: 240px 240px;
+    position: absolute;
+    top: 1271px;
+    right: 350px;
+  }
+
+  .up-to-top{
+    background: #D46900;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 800px;
+    left: 400px;
+  }
   .main {
     height: 100%;
   }
