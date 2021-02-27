@@ -63,6 +63,16 @@ body {
     top: 1271px;
     right: 350px;
   }
+  .bg-card-id {
+    background-image: url('~/assets/image/icons/004-id-card.svg');
+    //transform: rotate(45deg);
+    background-size: 200px 200px;
+    position: absolute;
+    bottom: 1215px;
+    left: 140px;
+    width: 200px;
+    height: 200px;
+  }
 
   .up-to-top{
     background: #D46900;

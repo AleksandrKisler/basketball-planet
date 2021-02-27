@@ -3,6 +3,7 @@
     <div class="bg-basketball"></div>
     <div class="bg-whistle"></div>
     <div class="bg-basketball-players"></div>
+    <div class="bg-card-id"></div>
 <!--    <div class="up-to-top" ref="upToTop" v-show="checkHeight">-->
 <!--    </div>-->
     <Header />

@@ -5,7 +5,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.or-line {
+.or-line,
+.couch {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,7 +25,6 @@
     .couch-list {
       height: 200px;
       width: inherit;
-      //background: lavender;
       padding: 0;
       list-style: none;
       .couch {
@@ -32,6 +32,15 @@
         height: 200px;
         background-size: 185px 200px;
         background-position: center center;
+        h3 {
+          text-transform: uppercase;
+          margin-left: -$base-margin;
+          color: $base-color-light-white;
+        }
+        img {
+          max-height: 100px;
+          max-width: 100px;
+        }
         &:nth-child(5n-4) {
           background-image: url('~/assets/image/couch-image/bg-couch-1.png');
         }
@@ -48,14 +57,32 @@
 
     }
     .information {
+      position: relative;
       margin-top: $base-margin*10 +2;
       width: inherit;
       height: 290px;
       background-size:808px  290px ;
       background-position: center center;
       background-image: url('~/assets/image/couch-image/bg-couch-5.png');
-
+      color: $base-color-light-white;
+      .or-team-icon {
+        top: 17px;
+        left: 17px;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+      }
+      h3 {
+        text-transform: uppercase;
+        padding: $base-margin*8 0 0 $base-margin*19;
+      }
+      p {
+        max-width: 695px;
+        max-height: 185px;
+        margin: $base-margin*2 0 0 $base-margin*16 +2;
+      }
     }
+
   }
   .or-line {
     margin-right: $base-margin;
