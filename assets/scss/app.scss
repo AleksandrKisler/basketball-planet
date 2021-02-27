@@ -73,6 +73,16 @@ body {
     width: 200px;
     height: 200px;
   }
+  .bg-medal {
+    background-image: url('~/assets/image/icons/005-medal.svg');
+    //transform: rotate(45deg);
+    background-size: 240px 240px;
+    position: absolute;
+    bottom: 1075px;
+    right: 340px;
+    width: 250px;
+    height: 250px;
+  }
 
   .up-to-top{
     background: #D46900;
