@@ -1,5 +1,46 @@
+.au-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .about-us{
+  z-index: 100;
   margin-top: 19px;
   width: inherit;
-  height: 400px;
+  height: 450px;
+  padding: 0 158px 0 110px;
+  position: relative;
+  .au-container {
+    margin: $base-margin*21 0 0 $base-margin*7;
+    width: 900px;
+    height: 270px;
+    border-radius: $base-border-radius*7;
+    background-color: $base-color-dirt-black;
+    p {
+      padding: $base-padding*2;
+    }
+  }
+
+  .au-line {
+    margin-right: $base-margin;
+    h3 {
+      font-size: $base-font-size +12;
+      padding: 0;
+      margin: 0 0 $base-margin*4 +3 0;
+      text-transform: uppercase;
+    }
+    .line {
+      height: 350px;
+      width: 4px;
+      background-color: #D46900;
+    }
+  }
 }
