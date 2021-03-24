@@ -4,3 +4,9 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Oswald';
+  src: url('Oswald-VariableFont_wght.ttf');
+  font-weight: 300;
+  font-style: normal;
+}

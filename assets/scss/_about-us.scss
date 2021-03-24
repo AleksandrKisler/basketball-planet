@@ -18,16 +18,35 @@
   height: 450px;
   padding: 0 158px 0 110px;
   position: relative;
+
   .au-container {
+    position: relative;
     margin: $base-margin*21 0 0 $base-margin*7;
     width: 900px;
-    height: 270px;
+    height: 310px;
     border-radius: $base-border-radius*7;
-    background-color: $base-color-dirt-black;
+    background-image: url('~/assets/image/bg-au.png');
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    color: white;
+    h2 {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      left: 40px;
+      color: #333333;
+      top: -35px;
+    }
     p {
-      padding: $base-padding*2;
+      font-family: 'Oswald', sans-serif !important;
+      padding: $base-padding*6 $base-padding*8;
+      margin: 0;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: justify;
     }
   }
+
 
   .au-line {
     margin-right: $base-margin;
