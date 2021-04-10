@@ -18,9 +18,27 @@
 .nav-item-2-1,
 .nav-item-1-2,
 .nav-item-2-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   border: 1px solid $base-color-dirt-black;
   box-sizing: border-box;
   border-radius: $base-border-radius*7;
+  h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    margin: 0;
+    color: $base-color-light-white;
+  }
+  .block-img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+  }
 }
 
 
@@ -52,18 +70,27 @@
   .col-left {
     align-items: flex-end;
     .nav-item-1-1 {
+      padding-left: $base-padding*5;
       width: 410px;
       height: 150px;
       //background: #000;
       background-image: url("~/assets/image/block-nav/block-nav-1.png") ;
       background-position: center center;
+
     }
     .nav-item-1-2 {
+      padding-top: $base-padding*5;
+      font-size: 32px;
+      align-items: center;
+      justify-content: flex-start;
       margin-top: $base-margin*8 +3;
       height: 315px;
       width: 220px;
       background-image: url("~/assets/image/block-nav/block-nav-3.png") ;
       background-position: center center;
+      img {
+        margin-top: $base-margin*8;
+      }
     }
   }
   .col-center {
@@ -71,6 +98,9 @@
     .nav-row {
       align-items: center;
       .nav-item-2-1 {
+        color: $base-color-light-white;
+        text-transform: uppercase;
+        padding-left: $base-padding*3;
         width: 210px;
         height: 150px;
         background-image: url("~/assets/image/block-nav/block-nav-2.png");
@@ -85,6 +115,7 @@
       }
     }
     .nav-item-2-2 {
+      padding-left: $base-padding*5;
       margin-top: $base-margin*8 +3;
       width: 410px;
       height: 150px;
