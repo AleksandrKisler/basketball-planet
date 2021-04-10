@@ -19,14 +19,8 @@
   animation-fill-mode: both;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  @include transition(background-color 0.5s ease-out);
-  @include user-select(none);
   will-change: opacity;
   z-index: 1000;
-
-  &.loading {
-    @include loading(3.25em, 0.325em);
-  }
 
   &.active {
     display: block;

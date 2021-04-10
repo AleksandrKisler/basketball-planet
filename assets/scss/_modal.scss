@@ -6,7 +6,7 @@
 
 .custom-modal-header {
   text-align: center;
-  border-radius: $base-radius+3 $base-radius+3 0 0;
+  border-radius: $base-radius +3 $base-radius +3 0 0;
   padding: $base-padding*7 $base-padding*4 $base-padding*8 $base-padding*4;
   background-color: transparent;
   // background-color: #FAFAFA;
@@ -14,24 +14,7 @@
   h4 {
     margin: $base-radius*1 0 0 0;
   }
-  .custom-icon {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background-size: cover;
-  }
-  .file-icon {
-    background: url('../img/icon-green-file.svg') no-repeat center center;
-  }
-  .media-icon {
-    background: url('../img/icon-green-media.svg') no-repeat center center;
-  }
-  .device-icon {
-    background: url('../img/icon-green-device.svg') no-repeat center center;
-  }
-  .cover-icon {
-    background: url('../img/icon-green-cover.svg') no-repeat center center;
-  }
+
 }
 
 .tm-modal {

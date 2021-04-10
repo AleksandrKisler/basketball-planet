@@ -5,6 +5,7 @@
         <li class="couch"
             v-for="(couch, id) in couchList"
             :key="`id_${id}`"
+            @click="openModal(couch)"
         >
           <h3>
             {{couch.shortName}}
@@ -30,6 +31,10 @@ export default {
   name: "OurTeam",
   data () {
     return {
+      modal:{
+        show:false,
+      },
+      loading:false,
       couchList:[
         {
           fullName:'БРЮТОВ ДМИТРИЙ',
