@@ -23,10 +23,31 @@
       <h3>Наша Команда</h3>
       <div class="line"></div>
     </div>
+    <tm-modal :visible.sync="modal.show"  width="600" marginTop="100px">
+      <template v-slot:body>
+        <h3>Карточка тренера</h3>
+        <div class="couch-container">
+          <div class="main-description">
+            <img src="" alt="Фото тренера" width="175" height="200">
+            <div class="description">
+              <div class="full-name">{{couch.fullName}}</div>
+              <p v-html="couch.description"></p>
+            </div>
+          </div>
+          <ul class="advance-list">
+            <li class="advance-item" v-for="(advance, i) in couch.advanceList" :key="`i_${i}`">{{" "+advance}}</li>
+          </ul>
+        </div>
+      </template>
+      <template v-slot:footer>
+        <button class="modal-button" @click="modal.show=false" :disabled="modal.loading">Закрыть</button>
+      </template>
+    </tm-modal>
   </section>
 </template>
 
 <script>
+import Modal from "~/components/Modal";
 export default {
   name: "OurTeam",
   data () {
@@ -110,5 +131,15 @@ export default {
         'Занятия в «Планета Баскетбола» подготавливают ребенка к будущей деятельности.\n',
     }
   },
+  methods:{
+    openModal(k){
+      this.modal.show = true;
+      this.couch = _.cloneDeep(k);
+      this.errors = {};
+    }
+  },
+  components: {
+    'tm-modal':Modal
+  }
 }
 </script>

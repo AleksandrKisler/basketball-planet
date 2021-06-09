@@ -9,8 +9,6 @@
   border-radius: $base-radius +3 $base-radius +3 0 0;
   padding: $base-padding*7 $base-padding*4 $base-padding*8 $base-padding*4;
   background-color: transparent;
-  // background-color: #FAFAFA;
-  // border-bottom: 1px solid #DFE0EB;
   h4 {
     margin: $base-radius*1 0 0 0;
   }
@@ -21,9 +19,9 @@
   position: absolute;
   text-align: left;
   background: #fff;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   border-radius: $base-radius+4;
-  z-index: 1001;
+  z-index: 3001;
   min-width: 300px;
   margin-bottom: $base-padding*10;
 
@@ -70,42 +68,34 @@
     text-align: right;
     // border-top: 1px solid $color-silver;
     position: relative;
-    padding: $base-padding*6 $base-padding*8;
+    padding: $base-padding*2 $base-padding*8;
     &:empty {display: none}
   }
-
-  // &.attached {
-  //   &.center {
-  //     top: 0;
-  //     left: 50%;
-  //   }
-  //   &.top, &.bottom {
-  //     width: 100%;
-  //     left: 0;
-  //     > .content {
-  //       max-height: ~'calc(100% - 3em)';
-  //       overflow: auto;
-  //     }
-  //   }
-  //   &.top {
-  //     top: 0;
-  //   }
-  //   &.bottom {
-  //     bottom: 0;
-  //   }
-  //   &.left, &.right {
-  //     height: 100%;
-  //     top: 0;
-  //     > .content {
-  //       max-height: ~'calc(100% - 3em)';
-  //       overflow: auto;
-  //     }
-  //   }
-  //   &.left {
-  //     left: 0;
-  //   }
-  //   &.right {
-  //     right: 0;
-  //   }
-  // }
 }
+.couch-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .main-description {
+    //font-family: 'Arial', sans-serif !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .advance-list{
+    padding: 30px 0 0 10px;
+    border-top: 2px solid darkgray;
+    .advance-item {
+      margin: 10px 0;
+    }
+  }
+}
+.modal-button {
+  border: 0;
+  padding: 10px 25px;
+  background-color: $base-color-orange-hover;
+  margin-bottom: $base-margin*3;
+}
+

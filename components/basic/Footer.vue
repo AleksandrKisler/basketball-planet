@@ -41,13 +41,12 @@ export default {
     return {
       loading: false,
       icon_list:[
-        {href:'#', src:'/facebook.svg', alt:'social network vk'},
-        {href:'#', src:'/instagram.svg', alt:'social network instagram'},
-        {href:'#', src:'/vk.svg', alt:'social network facebook'},
+        {href:'https://vk.com/basketballplanet', src:'/instagram.svg', alt:'social network instagram'},
+        {href:'https://www.instagram.com/basketball_planet86/', src:'/vk.svg', alt:'social network facebook'},
       ],
       phone_list:[
-        {phone:'+7(495) 666-01-66'},
-        {phone: '+7(495) 666-01-96'}
+        {phone:'+7(992) 330-90-07'},
+        {phone: '+7(922) 795-35-56'}
       ],
     }
   },

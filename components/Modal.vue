@@ -3,9 +3,6 @@
     <div :class="['tm-modal', 'attached', attached]" ref="modal" :style="mstyle">
       <span v-if="closeButton" aria-hidden="true" class="modal-close" @click="closeHandler">&times;</span>
       <template v-if="!noHeader">
-        <header :class="{'custom-modal-header': true, 'hidden': !customHeader}">
-          <slot name="custom-header"></slot>
-        </header>
         <header :class="{'hidden': customHeader}" class="modal-header">
           <slot name="header"></slot>
         </header>
