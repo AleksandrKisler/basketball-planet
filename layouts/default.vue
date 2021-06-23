@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div class="bg-basketball"></div>
+<!--    <div class="bg-basketball"></div>-->
     <div class="bg-whistle"></div>
     <div class="bg-basketball-players"></div>
     <div class="bg-card-id"></div>

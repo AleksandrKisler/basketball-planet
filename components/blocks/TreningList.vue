@@ -2,7 +2,7 @@
   <section class="training-list" id="training-list">
     <div class="tl-container">
       <div class="tl-training-types">
-        <h4>Виды тренировок</h4>
+        <h4 class="block-subtitle">Виды тренировок</h4>
         <ul class="tl-types">
           <li
             v-for="(type, tp) in types_list"
@@ -18,22 +18,47 @@
             <p class="tl-type-name">{{type.type_name}}</p>
           </li>
         </ul>
+
       </div>
       <div class="tl-age-groups">
-        <h4>Возрастные группы</h4>
         <ul class="tl-groups">
+          <li class="tl-group">
+            <div class="age-circle">
+              <div class="circle-title">
+                от
+              </div>
+            </div>
+            <div class="age-dot">
+            </div>
+            <div class="age-circle">
+              <div class="circle-title">
+                до
+              </div>
+            </div>
+          </li>
           <li
             v-for="(group, gr) in group_list"
             :key="`type_${gr}`"
             class="tl-group">
-            <div class="tl-dot"></div>
-            {{group.age}}
+            <div class="age-circle">
+              {{group.start_age}}
+            </div>
+            <div
+              v-for="(dot, d) of group.dot_length"
+              :key="`type_${d}`"
+              class="age-dot">
+
+            </div>
+            <div class="age-circle">
+              {{group.finish_age}}
+            </div>
           </li>
         </ul>
       </div>
     </div>
-    <div class="tl-line">
-      <h3>Тренировки</h3>
+    <div class="main-container">
+      <div class="left-title">Тренировки</div>
+      <div class="right-title right-title__long-mt">Возрастные группы</div>
       <div class="line"></div>
     </div>
   </section>
@@ -51,9 +76,10 @@ export default {
         {bg: 'trening_3.png', icon: 'basketball_3.svg', type_name: 'Индивидуальные тренировки'},
                   ],
       group_list: [
-        {age:' От 4 до 7 лет'},
-        {age:' От 8 до 13 лет'},
-        {age:' От 14+'},
+        {start_age:'4', finish_age:'7',   dot_length:3},
+        {start_age:'8', finish_age:'13',  dot_length:6},
+        {start_age:'14', finish_age:'',   dot_length:12},
+
         ]
     }
   }

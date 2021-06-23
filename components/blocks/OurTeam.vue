@@ -19,8 +19,46 @@
         <p>{{description}}</p>
       </div>
     </div>
-    <div class="or-line">
-      <h3>Наша Команда</h3>
+    <div class="order">
+      <h5 class="order-title">Первая тренировка бесплатно</h5>
+      <div class="order-click" @click="openOrderWindow">
+
+      </div>
+      <h5 class="order-title">вы можете записаться через :</h5>
+
+      <div class="order-social-network-list">
+        <div class="cube-dots">
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+        </div>
+        <div class="order-social-network" >
+
+        </div>
+        <div class="cube-dots">
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+        </div>
+
+        <div class="order-social-network">
+
+        </div>
+
+        <div class="cube-dots">
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+          <div class="dot-sm"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container main-container__long">
+      <div class="left-title">Наша Команда</div>
+      <div class="right-title">Записаться</div>
       <div class="line"></div>
     </div>
     <tm-modal :visible.sync="modal.show"  width="600" marginTop="100px">
@@ -43,6 +81,15 @@
         <button class="modal-button" @click="modal.show=false" :disabled="modal.loading">Закрыть</button>
       </template>
     </tm-modal>
+    <tm-modal :visible.sync="modal.show_order"  width="600" marginTop="200px">
+      <template v-slot:body>
+        <h3>Запись в секцию </h3>
+        <p>Запись через сайт временно не доступна</p>
+      </template>
+      <template v-slot:footer>
+        <button class="modal-button" @click="modal.show_order=false" :disabled="modal.loading">Закрыть</button>
+      </template>
+    </tm-modal>
   </section>
 </template>
 
@@ -54,6 +101,7 @@ export default {
     return {
       modal:{
         show:false,
+        show_order: false,
       },
       loading:false,
       couchList:[
@@ -104,21 +152,21 @@ export default {
             'Стаж тренерской деятельности более 11 лет',
           ]
         },
-        {
-          fullName:'ШАБАНОВА ОКСАНА',
-          shortName:'ОКСАНА',
-          description:'помощник директора и администратор Планеты баскетбола, тренер и действующая баскетболистка БК «Север»',
-          advanceList:[
-           'Обучается в ФГБОУ ВО «Югорский государственный университет» г.Ханты-Мансийск по направлению «Физическая культура»',
-            'Повышение квалификации по направлению «Спортивная диетология и нутрициология», Уральский институт повышения квалификации и переподготовки',
-            'Бронзовый призер Тюменской области Ассоциации студенческого баскетбола',
-            'Неоднократный победитель и MVP муниципального этапа регулярного чемпионата ШБЛ КЭС-баскет',
-            'Игрок и капитан женской баскетбольной команды БК «Север» ФГБОУ ВО «Югорский государственный университет»',
-            'Главный секретарь и судья ЛБЛ «Лига Планеты» г.Ханты-Мансийск',
-            'Тренер и администратор «Планеты баскетбола»',
-            'Стаж тренерской деятельности 2 года',
-          ]
-        }
+        // {
+        //   fullName:'ШАБАНОВА ОКСАНА',
+        //   shortName:'ОКСАНА',
+        //   description:'помощник директора и администратор Планеты баскетбола, тренер и действующая баскетболистка БК «Север»',
+        //   advanceList:[
+        //    'Обучается в ФГБОУ ВО «Югорский государственный университет» г.Ханты-Мансийск по направлению «Физическая культура»',
+        //     'Повышение квалификации по направлению «Спортивная диетология и нутрициология», Уральский институт повышения квалификации и переподготовки',
+        //     'Бронзовый призер Тюменской области Ассоциации студенческого баскетбола',
+        //     'Неоднократный победитель и MVP муниципального этапа регулярного чемпионата ШБЛ КЭС-баскет',
+        //     'Игрок и капитан женской баскетбольной команды БК «Север» ФГБОУ ВО «Югорский государственный университет»',
+        //     'Главный секретарь и судья ЛБЛ «Лига Планеты» г.Ханты-Мансийск',
+        //     'Тренер и администратор «Планеты баскетбола»',
+        //     'Стаж тренерской деятельности 2 года',
+        //   ]
+        // }
       ],
       description:'Команда проекта «Планета баскетбола» – это коллектив единомышленников и ' +
         'профессионалов своего дела, которые нацелены на мотивацию людей к занятиями физической ' +
@@ -136,6 +184,11 @@ export default {
       this.modal.show = true;
       this.couch = _.cloneDeep(k);
       this.errors = {};
+    },
+    openOrderWindow() {
+      this.modal.show_order = true;
+
+      console.log("log:modal");
     }
   },
   components: {

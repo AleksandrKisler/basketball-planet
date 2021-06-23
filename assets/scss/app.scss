@@ -21,7 +21,7 @@ body * {
 }
 body {
   width: 100%;
-  background-color: #BDBDBD;
+  background-color: #F2F2F2;
   overflow-y: scroll;
   box-sizing: border-box;
   padding: 0;
@@ -34,8 +34,7 @@ body {
 }
 
 .container {
-  max-width: 1366px;
-  width: 100%;
+  width: 1366px;
   box-shadow: 0 0 20px #7C7C7C;
   background: $base-color-light-white;
   position: relative;
@@ -49,31 +48,33 @@ body {
     left: 37px;
   }
   .bg-whistle {
-    width: 200px;
-    height: 220px;
+    width: 370px;
+    height: 370px;
     background-image: url('~/assets/image/icons/002-whistle.svg');
     //transform: rotate(45deg);
     position: absolute;
-    top: 643px;
-    right: 322px;
+    background-size: 100%;
+    top: 500px;
+    right: 103px;
   }
   .bg-basketball-players {
-    width: 240px;
-    height: 240px;
+    width: 350px;
+    height: 350px;
     background-image: url('~/assets/image/icons/003-basketball-players.svg');
     //transform: rotate(45deg);
-    background-size: 240px 240px;
+    background-size: 350px 350px;
     position: absolute;
-    top: 1271px;
-    right: 350px;
+    top: 1220px;
+    left: 200px;
+    transform: rotate(-15deg);
   }
   .bg-card-id {
     background-image: url('~/assets/image/icons/004-id-card.svg');
     //transform: rotate(45deg);
     background-size: 200px 200px;
     position: absolute;
-    bottom: 1215px;
-    left: 140px;
+    top: 230px;
+    left: 80px;
     width: 200px;
     height: 200px;
   }
@@ -82,8 +83,8 @@ body {
     //transform: rotate(45deg);
     background-size: 240px 240px;
     position: absolute;
-    bottom: 1075px;
-    right: 340px;
+    top: 1075px;
+    right: 320px;
     width: 250px;
     height: 250px;
   }
@@ -104,4 +105,47 @@ body {
   .container { max-width: 1200px; }
 } @media screen and (max-width: 1280px) {
   .container { max-width: 1000px; }
+}
+.main-container {
+  position: absolute;
+  height: 690px;
+  width: 591px;
+  right: 260px;
+  top: 0;
+  border-bottom: 4px solid #D46900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__long {
+    height: 953px;
+  }
+  &__short {
+    height: 100%;
+    border-bottom: 0;
+
+  }
+  .right-title,.left-title {
+    position: absolute;
+    top: 12px;
+    font-size:36px;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  .left-title {
+    left: 0;
+  }
+  .right-title {
+    right: 0;
+    &__long-mt {
+      right: -122px;
+    }
+  }
+  .line {
+    height: 100%;
+    width: 4px;
+    background-color: #D46900;
+    margin-top: 17px;
+    margin-bottom: 17px;
+  }
 }

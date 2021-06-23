@@ -3,11 +3,7 @@
     <BlockNav     />
     <TreningList  />
     <OurTeam      />
-    <Order        />
     <AboutUs      />
-<!--    <div id="id" class="back" style="display: none">-->
-<!--      <p style="width: 200px; height: 200px; background-color: red; position: fixed; bottom: 100px; right: 100px; "></p>-->
-<!--    </div>-->
   </div>
 </template>
 <script>

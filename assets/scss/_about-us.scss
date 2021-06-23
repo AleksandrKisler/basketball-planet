@@ -13,38 +13,60 @@
 
 .about-us{
   z-index: 100;
-  margin-top: 19px;
   width: inherit;
-  height: 450px;
-  padding: 0 158px 0 110px;
+  height: 100%;
+  padding: 0 100px 0 70px;
+  margin-bottom: 80px;
   position: relative;
 
   .au-container {
-    position: relative;
-    margin: $base-margin*21 0 0 $base-margin*7;
-    width: 900px;
-    height: 310px;
+    margin: $base-margin*21 0 0 0;
+    width: 100%;
+    height: 450px;
     border-radius: $base-border-radius*7;
-    background-image: url('~/assets/image/bg-au.png');
-    background-repeat: no-repeat;
-    background-size: 100% 130%;
+    background-color: #333333;
     color: white;
-    h2 {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      left: 40px;
-      color: #333333;
-      top: -35px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    .about-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: #F2F2F2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 0 0 9*$base-padding;
+      svg {
+        width: 180px;
+        height: 180px;
+        path {
+          fill: #333333;
+        }
+      }
     }
-    p {
-      font-family: 'Oswald', sans-serif !important;
-      padding: $base-padding*6 $base-padding*8;
-      margin: 0;
-      font-size: 18px;
-      line-height: 24px;
-      text-align: justify;
+    .about-text {
+      width: 70%;
+
+      h2 {
+        margin: 20px 0 0 auto;
+        padding: 0 0 0 $base-padding*8;
+        left: 40px;
+        color: #F2F2F2;
+      }
+      p {
+        font-family: 'Roboto', sans-serif !important;
+        padding: $base-padding*3 $base-padding*8 $base-padding*6 $base-padding*8;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: justify;
+        margin: 0;
+      }
     }
+
   }
 
 

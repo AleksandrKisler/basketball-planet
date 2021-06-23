@@ -93,9 +93,15 @@
   }
 }
 .modal-button {
+  border-radius: 10px;
   border: 0;
   padding: 10px 25px;
   background-color: $base-color-orange-hover;
   margin-bottom: $base-margin*3;
+  &:hover {
+    background-color: #D46900;
+    color: #F2F2F2;
+
+  }
 }
 

@@ -1,7 +1,6 @@
 .training-list,
 .tl-type,
-.tl-container,
-.tl-group {
+.tl-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,11 +25,10 @@
 }
 
 .training-list {
-  margin-top: 19px;
   width: inherit;
-  height: 660px;
-  padding: 0 110px 0 110px;
+  padding: 0 101px 0 70px;
   position: relative;
+  height: 690px;
   @media screen and (max-width: 1444px) and (min-width: 1280px) {
     padding: 0 20px 0 40px;
   }
@@ -38,14 +36,20 @@
     padding: 0 20px 0 30px;
   }
   .tl-container {
-    h4 {
-      font-size: $base-font-size +10;
+    position: relative;
+    width: 100%;
+    .block-subtitle {
+      top: -22px;
+      left: 110px;
+      position: absolute;
+      font-size: $base-font-size +14;
       margin: 0;
       text-transform: uppercase;
     }
     .tl-training-types {
       justify-content: center;
       align-items: center;
+
       .tl-types{
         color: $base-color-light-white;
         .tl-type {
@@ -56,9 +60,11 @@
           height: 115px;
           background-position:center center;
           .tl-img {
-            margin: 0 $base-margin*5+2 0 $base-margin*3 +3;
+            margin: 0 $base-margin*6+1 0 $base-margin*6 +1;
           }
           .tl-type-name {
+            font-family: "Roboto",sans-serif;
+            font-size: 28px;
             justify-content: center;
             height: 70px;
             padding-left: $base-padding*4 +1;
@@ -67,40 +73,58 @@
         }
       }
     }
-    .tl-age-groups {
-      margin-left: $base-margin*7;
-      margin-top: $base-margin*14;
-      .tl-groups {
-        .tl-group {
-          justify-content: flex-start;
-          .tl-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #D46900;
-            margin-right: $base-margin*2;
+    .tl-age-groups,
+    .tl-groups  {
+      width: 393px;
+      height: 427px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .tl-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 31px;
+        .age-circle {
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          background-color: #333333;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 48px;
+          color: #F2F2F2;
+          position: relative;
+          .circle-title {
+            position: absolute;
+            top: 5px;
           }
-          &:not(:first-child) {
-            margin-top: $base-margin;
+          &:last-child {
+            margin-top: 17px;
           }
         }
+        .age-dot {
+          background-color: #D46900;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          margin-top: 17px;
+        }
+        &:last-child {
+          .age-circle:last-child {
+            display: none;
+          }
+
+        }
       }
+
     }
 
-  }
-  .tl-line {
-    margin-right:  $base-margin*3+1;
-    h3 {
-      font-size: $base-font-size +12;
-      padding: 0;
-      margin: 0 0 $base-margin*4 +3 0;
-      text-transform: uppercase;
-    }
-    .line {
-      height: 608px;
-      width: 4px;
-      background-color: #D46900;
-    }
+
   }
 
 }
