@@ -44,8 +44,8 @@ body {
     background-image: url('~/assets/image/icons/001-basketball.svg');
     //transform: rotate(45deg);
     position: absolute;
-    top: 471px;
-    left: 37px;
+    bottom: 775px;
+    left: 50px;
   }
   .bg-whistle {
     width: 370px;
@@ -88,7 +88,16 @@ body {
     width: 250px;
     height: 250px;
   }
-
+  .bg-cort {
+    background-image: url('~/assets/image/basketball-court 1.svg');
+    //transform: rotate(45deg);
+    background-size: cover;
+    position: absolute;
+    bottom:  820px;
+    right: 98px;
+    width: 348px;
+    height: 345px;
+  }
   .up-to-top{
     background: #D46900;
     width: 40px;
